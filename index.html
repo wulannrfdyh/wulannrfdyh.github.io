@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Kalkulator Segitiga</h1>
+        <img src="triangle.png" alt="Gambar Segitiga" class="triangle-image">
+        <div class="formula">
+            <p><strong>Rumus Luas Segitiga:</strong><br>
+            L = 1/2 * a * t<br>
+            Dimana:<br>
+            L = Luas<br>
+            a = Panjang Alas<br>
+            t = Tinggi</p>
+            
+            <p><strong>Rumus Keliling Segitiga:</strong><br>
+            K = S1 + S2 + S3<br>
+            Dimana:<br>
+            K = Keliling<br>
+            S1 = Sisi A<br>
+            S2 = Sisi B<br>
+            S3 = Sisi C</p>
+        </div>
+        <div class="calculator">
+            <h2>Hitung Luas Segitiga</h2>
+            <form id="luas-form">
+                <label for="alas">Panjang Alas (a):</label>
+                <input type="number" id="alas" required>
+                <label for="tinggi">Tinggi (t):</label>
+                <input type="number" id="tinggi" required>
+                <button type="button" onclick="hitungLuas()">Hitung Luas</button>
+                <p id="hasil-luas"></p>
+            </form>
+
+            <h2>Hitung Keliling Segitiga</h2>
+            <form id="keliling-form">
+                <label for="sisi1">Sisi A (S1):</label>
+                <input type="number" id="sisi1" required>
+                <label for="sisi2">Sisi B (S2):</label>
+                <input type="number" id="sisi2" required>
+                <label for="sisi3">Sisi C (S3):</label>
+                <input type="number" id="sisi3" required>
+                <button type="button" onclick="hitungKeliling()">Hitung Keliling</button>
+                <p id="hasil-keliling"></p>
+            </form>
+            <button type="reset" onclick="resetForm()">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
